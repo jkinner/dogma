@@ -77,6 +77,7 @@ renders a /template/ to show a form that requests two numbers. Then you need a s
 (perhaps the same one) that adds the numbers and displays the result.
 
 /public/index.php (Controller)
+
     <?php
     require_once('Dogma.php');
     require_once('conf.php');
@@ -93,6 +94,7 @@ renders a /template/ to show a form that requests two numbers. Then you need a s
     }
 
 /templates/main.php (Default view)
+
     <html>
     <head><title>Addition machine</title></head>
     <body>
@@ -104,6 +106,7 @@ renders a /template/ to show a form that requests two numbers. Then you need a s
     </html>
 
 /templates/result.php (View for results)
+
     <html>
     <head><title>Addition machine - result</title></head>
     <body>
@@ -122,9 +125,10 @@ language form called `Messages` that contains your default translations. `Messag
 will be displayed to your users. Then, place a `Messages` class in each of your localized
 languages and, if appropriate, countries (e.g. en/US versus en/GB or es/ES and es/MX). Dogma
 will load the appropriate `Messages` class for the language of the user. The following examples
-show how to localize our simple additiona application.
+show how to localize our simple addition application.
 
 /templates/DefaultMessages.php
+
     <?php
     class DefaultMessages {
       function AdditionPrompt() {
@@ -133,11 +137,13 @@ show how to localize our simple additiona application.
     }
 
 /templates/Messages.php
+
     <?php
     class Messages extends DefaultMessages {
     }
 
 /templates/es/Messages.php
+
     <?php
     class Messages extends DefaultMessages {
       function AdditionPrompt() {
@@ -146,6 +152,7 @@ show how to localize our simple additiona application.
     }
 
 /templates/main.php (Default view)
+
     <html>
     <head><title>Addition machine</title></head>
     <body>
