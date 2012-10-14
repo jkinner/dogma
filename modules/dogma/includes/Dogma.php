@@ -307,7 +307,7 @@ class Dogma {
         'password'  =>  $db_password,
         'server'    =>  $db_server,
         'port'      =>  $db_port,
-        'database'	=>  $db_name
+        'database'  =>  $db_name
     );
   }
 }
